@@ -8,9 +8,9 @@ class MathAlgorithmTest {
 
     @Test
     void testGreatestCommonDivisor() {
-        assertEquals(6, MathAlgorithm.greatestCommonDivisor(12, 18));
-        assertEquals(8, MathAlgorithm.greatestCommonDivisor(16, 24));
-        assertEquals(1, MathAlgorithm.greatestCommonDivisor(15, 16));
+        assertEquals(6, MathAlgorithm.getGreatestCommonDivisorOf(12, 18));
+        assertEquals(8, MathAlgorithm.getGreatestCommonDivisorOf(16, 24));
+        assertEquals(1, MathAlgorithm.getGreatestCommonDivisorOf(15, 16));
     }
 
 }
