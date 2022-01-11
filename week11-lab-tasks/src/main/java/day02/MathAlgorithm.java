@@ -23,7 +23,7 @@ public class MathAlgorithm {
 
     private static List<Integer> getDivisorsOf(int x) {
         List<Integer> results = new ArrayList<>();
-        for (int i = 1; i <= x / 2; i++) {
+        for (int i = 1; i <= x; i++) {
             if ((x % i) == 0) {
                 results.add(i);
             }
