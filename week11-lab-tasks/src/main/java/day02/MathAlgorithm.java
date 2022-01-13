@@ -3,7 +3,7 @@ package day02;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MathAlgorithm {
+public final class MathAlgorithm {
     private MathAlgorithm(){
 
     }
@@ -13,7 +13,7 @@ public class MathAlgorithm {
         List<Integer> divisorsOfB = getDivisorsOf(b);
         for (int i = divisorsOfA.size() - 1; i >= 0; i--) {
             for (int j = divisorsOfB.size() - 1; j >= 0; j--) {
-                if (divisorsOfA.get(i) == divisorsOfB.get(j)) {
+                if (divisorsOfA.get(i).intValue() == divisorsOfB.get(j)) {
                     return divisorsOfA.get(i);
                 }
             }
@@ -21,7 +21,7 @@ public class MathAlgorithm {
         return 1;
     }
 
-    private static List<Integer> getDivisorsOf(int x) {
+    public static List<Integer> getDivisorsOf(int x) {
         List<Integer> results = new ArrayList<>();
         for (int i = 1; i <= x; i++) {
             if ((x % i) == 0) {
