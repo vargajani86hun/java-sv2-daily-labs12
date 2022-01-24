@@ -39,8 +39,8 @@ public class RunStatistic {
 
     public void readRunsFromFileWithStream(String path) {
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            br.readLine();
             runs = br.lines()
+                    .skip(1L)
                     .map(line -> line.split(" km;"))
                     .map(values -> new RunNote(Double.parseDouble(values[0]),
                             LocalDate.parse(values[1])))
