@@ -23,6 +23,14 @@ public class RunStatistic {
         return sum;
     }
 
+    public double getSumOfRunsInMonthWithStream(int year, int month) {
+        return runs.stream()
+                .filter(run -> run.getRunAt().getYear() == year
+                        && run.getRunAt().getMonth().getValue() == month)
+                .mapToDouble(RunNote::getDistance)
+                .sum();
+    }
+
     public void readRunsFromFile(String path) {
         try (BufferedReader br = Files.newBufferedReader(Path.of(path))) {
             String line;
